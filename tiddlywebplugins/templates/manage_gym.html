@@ -38,7 +38,7 @@
             <input name="routeSetter" size="20" value="{{ route.fields.routeSetter}}"/>
         </td>
         <td>
-            <input name="isLeadRoute" type="checkbox" value="{{ route.title }}"
+            <input name="isLeadRoute" type="checkbox" value="{{ loop.index0 }}"
             {%- if route.fields.isLeadRoute -%} checked="checked"{%- endif %}
             />
         </td>
@@ -49,7 +49,7 @@
         <td><input name="grade" size="5"></td>
         <td><input name="routeSetter" size="20"></td>
         <td><input name="isLeadRoute" type="checkbox"
-            value="new_one" checked="checked" /></td>
+            value="{{ routes|length }}" checked="checked" /></td>
     </tr>
 
     </table>
